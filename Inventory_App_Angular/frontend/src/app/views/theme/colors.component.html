@@ -1,0 +1,31 @@
+<c-row ngPreserveWhitespaces>
+ 
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Customers</strong>
+      </c-card-header>
+      <c-card-body>
+          <form (ngSubmit)="onSubmit()" cForm>
+            <div class="mb-3">
+              <label  cLabel for="CustCode">Customer Code</label>
+              <input name="CustCode" cFormControl [(ngModel)]="customerModel.CustCode"
+                     id="CustCode"
+                     placeholder="Enter customer code"
+                     type="text" />
+            </div>
+            <div class="mb-3">
+              <label cLabel for="CustName">Customer Name</label>
+              <input name="CustName"  [(ngModel)]="customerModel.CustName" cFormControl
+                     id="CustName"
+                     placeholder="Enter customer name"
+                     type="text" />
+            </div>
+            <div class="mb-3">
+              <button type="submit" cButton class="px-4" color="primary"></button>
+            </div>
+          </form>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

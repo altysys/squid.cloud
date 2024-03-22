@@ -1,0 +1,66 @@
+<c-row ngPreserveWhitespaces>
+  
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Customer Entry</strong>
+      </c-card-header>
+      <c-card-body>
+        
+        <form (ngSubmit)="onSubmit()" cForm>
+          <div class="mb-3">
+            <label cLabel for="custCode">Customer Code</label>
+            <input cFormControl [(ngModel)]="customerModel.CustCode"
+                   id="custCode" name="CustCode"
+                   placeholder="Enter Customer Code"
+                   type="text" />
+          </div>
+          <div class="mb-3">
+            <label cLabel for="custName">Customer Name</label>
+            <input placeholder="Enter Customer Name" type="text" [(ngModel)]="customerModel.CustName" name="CustName" cFormControl id="custName" />
+          </div>
+          <div class="col-auto">
+            <button cButton class="mb-3" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+        
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+<c-row ngPreserveWhitespaces>
+
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Customer List</strong>
+      </c-card-header>
+      <c-card-body>
+
+        <table [striped]="true" cTable>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Customer Code</th>
+              <th scope="col">Customer Name</th>
+              <th scope="col">Created Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let customer of customers | async, let i = index">
+              <th scope="row">{{i + 1}}</th>
+              <td>{{customer.CustCode}}</td>
+              <td>{{customer.CustName}}</td>
+              <td>{{customer.CreatedDate | date : 'dd-MMM-yyyy'}}</td>
+            </tr>
+           
+          </tbody>
+        </table>
+
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+

@@ -1,0 +1,82 @@
+<c-row ngPreserveWhitespaces>
+  
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Product Entry</strong>
+      </c-card-header>
+      <c-card-body>
+        
+        <form (ngSubmit)="onSubmit()" cForm>
+          <div class="mb-3">
+            <label cLabel for="productCode">Product Code</label>
+            <input cFormControl [(ngModel)]="productModel.ProductCode"
+                   id="productCode" name="ProductCode"
+                   placeholder="Enter Product Code"
+                   type="text" />
+          </div>
+          <div class="mb-3">
+            <label cLabel for="productName">Product Name</label>
+            <input placeholder="Enter Product Name" type="text" [(ngModel)]="productModel.ProductName" name="ProductName" cFormControl id="productName" />
+          </div>
+          <div class="mb-3">
+            <label cLabel for="sku">Sku</label>
+            <input placeholder="Enter Sku" type="text" [(ngModel)]="productModel.Sku" name="Sku" cFormControl id="sku" />
+          </div>
+          <div class="mb-3">
+            <label cLabel for="price">Price</label>
+            <input placeholder="Enter Price" type="number" [(ngModel)]="productModel.ProductPrice" name="ProductPrice" cFormControl id="price" />
+          </div>
+          <div class="mb-3">
+            <label cLabel for="stock">Stock</label>
+            <input placeholder="Enter Stock" type="number" [(ngModel)]="productModel.CurrentStock" name="CurrentStock" cFormControl id="stock" />
+          </div>
+          <div class="col-auto">
+            <button cButton class="mb-3" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+        
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+<c-row ngPreserveWhitespaces>
+
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Product List</strong>
+      </c-card-header>
+      <c-card-body>
+
+        <table [striped]="true" cTable>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Product Code</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Sku</th>
+              <th scope="col">Price</th>
+              <th scope="col">Current Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let vendor of products | async, let i = index">
+              <th scope="row">{{i + 1}}</th>
+              <td>{{vendor.ProductCode}}</td>
+              <td>{{vendor.ProductName}}</td>
+              <td>{{vendor.Sku}}</td>
+              <td>{{vendor.ProductPrice}}</td>
+              <td>{{vendor.CurrentStock}}</td>
+            </tr>
+           
+          </tbody>
+        </table>
+
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+
