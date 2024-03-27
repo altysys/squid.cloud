@@ -1,7 +1,8 @@
-Worked on SQL server integration.
-Cover basic crud operation.
-Cover native sql query execution.
 Used Angular SDK
+Worked on SQL server integration with Angular SDK (Details)
+Cover basic crud operation. For customer and Vendor (Details)
+Cover native SQL query execution from Angular SDK
+
 Todo
 Trigger - 
 Cron Job - 
