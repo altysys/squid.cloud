@@ -1,6 +1,10 @@
 Used Angular SDK
 Worked on SQL server integration with Angular SDK (Details)
-Cover basic crud operation. For customer and Vendor (Details)
+  - Used SecureAPI method in Service
+  - Used Sql Server connection from Azure cloud and store password in seceret.
+Cover basic crud operation. For customer and Vendor 
+  - Run native sql server query
+  - Run stored procedure in sql server
 Cover native SQL query execution from Angular SDK
 
 Todo
