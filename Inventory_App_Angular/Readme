@@ -7,7 +7,14 @@ Cover basic crud operation. For customer and Vendor
   - Run stored procedure in sql server
 Cover native SQL query execution from Angular SDK
 
-Todo
 Trigger - 
+  Created basic trigger on dbo.ProductCollection
 Cron Job - 
+  Created scheduler for email service, where we can write logic to send email in every minutes.
+Webhook -
+  Added weebhook endpoint to handel payment required from third party applications. Similarly we can expose OpenAPI.
+
+Deployment - 
+ - Deployment done on DEV and PROD environment.
+ - Also deployed angular application on Azure and call SQUID backend.
 
