@@ -18,3 +18,21 @@ Deployment -
  - Deployment done on DEV and PROD environment.
  - Also deployed angular application on Azure and call SQUID backend.
 
+Angular Application URL:
+https://squid-cloud-webapp.azurewebsites.net/
+
+Demo Application has following features:
+  - User Login
+  - Vendor Creation
+  - Customer Creation
+  - Invoice Creation
+
+Webhook URL:
+https://3ma7kty4bszz6cu4qo.ap-south-1.aws.squid.cloud/webhooks/handleStripePayment
+
+
+
+Queries:
+- How we can manage relations in collection on high level abstractions. (I am able to achive this fuctionality with help of stored procedure but I want to achive on abstration level only like we use in Entity framework or other ORM framework)
+
+
