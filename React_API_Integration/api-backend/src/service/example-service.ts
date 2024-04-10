@@ -24,5 +24,8 @@ export class ExampleService extends SquidService {
   secureCatFacts(context: ApiCallContext): boolean {
     return true; // Allows all access to the catFacts integration
   }
-
+  @secureApi('books')
+  secureBooks(context: ApiCallContext): boolean {
+    return true; // Allows all access to the books integration
+  }
 }

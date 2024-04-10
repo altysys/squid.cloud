@@ -10,9 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.14",
+    "@mui/styled-engine": "^5.15.14",
     "@squidcloud/client": "^1.0.195",
     "@squidcloud/react": "^1.0.47",
     "react": "^18.2.0",
+    "react-data-table-component": "^7.6.2",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
