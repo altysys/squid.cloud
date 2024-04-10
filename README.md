@@ -4,6 +4,4 @@ each example demonstrates a different aspect of squid.cloud offering
 
 
 Queries/Challenges:
-- How we can manage relations in the collection on high-level abstractions. (I can achieve this functionality with the help of stored procedure but I want to achieve it on an abstraction level only like we use in Entity Framework or other ORM frameworks)
-- Is the backend always required, can we write web applications without requiring a backend? simply by connecting to the database using squid SDK? We have to add secure attributes, and define all API endpoints, can we bypass the same?
-- 
+- How do we manage parent-child relationships in a relational database?  with SQUID we have to add parent first, then child, which results in an additional round trip to DB, with EF we can avoid this. As of now with SQUID we have to use store procedure to achieve this in single save/round trip.
