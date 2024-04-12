@@ -1,0 +1,4 @@
+# This file contains the application API key - please do not add to version control
+node_modules
+dist
+.env
